@@ -1,0 +1,24 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="ikramTP4_PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>ma.enset.ikram.tp4.singletable.CompteBancaire</class>
+        <class>ma.enset.ikram.tp4.singletable.CompteCourant</class>
+        <class>ma.enset.ikram.tp4.singletable.CompteEpargne</class>
+        <class>ma.enset.ikram.tp4.joined.VehiculeFlotte</class>
+        <class>ma.enset.ikram.tp4.joined.VoitureDirection</class>
+        <class>ma.enset.ikram.tp4.joined.UtilitaireLogistique</class>
+        <class>ma.enset.ikram.tp4.tableperclass.IntervenantProjet</class>
+        <class>ma.enset.ikram.tp4.tableperclass.DeveloppeurFullstack</class>
+        <class>ma.enset.ikram.tp4.tableperclass.ChefDeProjetTech</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:tp4_db;DB_CLOSE_DELAY=-1"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
